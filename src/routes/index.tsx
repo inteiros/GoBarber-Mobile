@@ -6,7 +6,7 @@ import SignUp from '../pages/SignUp';
 
 const Auth = createStackNavigator();
 
-const AuthRoutes: React.FC = () => (
+const Routes: React.FC = () => (
   <Auth.Navigator
     screenOptions={{
       headerShown: false,
@@ -18,4 +18,4 @@ const AuthRoutes: React.FC = () => (
   </Auth.Navigator>
 );
 
-export default AuthRoutes;
+export default Routes;
