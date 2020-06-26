@@ -36,6 +36,7 @@
     "react-native-reanimated": "^1.8.0",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.7.0",
+    "react-native-testing-library": "^2.1.0",
     "react-native-vector-icons": "^6.6.0",
     "styled-components": "^5.1.0",
     "yup": "^0.28.5"
@@ -61,7 +62,18 @@
     "typescript": "^3.8.3"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/pages/**/*.tsx",
+      "src/components/**/*.tsx",
+      "src/hooks/*.tsx",
+      "!src/hooks/index.tsx"
+    ],
     "preset": "react-native",
+    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+    "setupFiles": [
+      "./src/setupTests.ts",
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
